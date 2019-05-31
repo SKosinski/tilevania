@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 263529232}
   - component: {fileID: 263529231}
   - component: {fileID: 263529230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7031,6 +7031,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafa44ad6a6e56f44aad01d89c6bc74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  runSpeed: 8
+  jumpSpeed: 18
 --- !u!50 &1200486910
 Rigidbody2D:
   serializedVersion: 4
@@ -7050,8 +7052,8 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!61 &1200486911
 BoxCollider2D:
   m_ObjectHideFlags: 0
