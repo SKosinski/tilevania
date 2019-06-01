@@ -494,7 +494,16 @@ Tilemap:
   - first: {x: 0, y: 8, z: 0}
     second:
       m_TileIndex: 40
-      m_TileSpriteIndex: 21
+      m_TileSpriteIndex: 5
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 2
+      m_ColliderType: 1
+  - first: {x: 3, y: 8, z: 0}
+    second:
+      m_TileIndex: 42
+      m_TileSpriteIndex: 40
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -584,6 +593,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 92f5690166926ca408a8de2287959b4e, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: ca279ba88289f5748913108eca69cf6d, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: feb1227204407cd4db33f6ba201ce695, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 1
     m_Data: {fileID: -7832389824997676707, guid: e4456b0218b71a3499cf4b6e5404291b,
@@ -600,7 +613,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: -3326836957996475874, guid: e4456b0218b71a3499cf4b6e5404291b,
       type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 7323906098350758705, guid: e4456b0218b71a3499cf4b6e5404291b,
       type: 3}
   - m_RefCount: 1
@@ -646,7 +659,7 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: -3493280607249542649, guid: e4456b0218b71a3499cf4b6e5404291b,
       type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 7953296568139915108, guid: e4456b0218b71a3499cf4b6e5404291b,
       type: 3}
   - m_RefCount: 1
@@ -703,8 +716,10 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 3747544219709766277, guid: e4456b0218b71a3499cf4b6e5404291b,
       type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 3c0f6fbb35dade841b10f71b4f9f21b7, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 47
+  - m_RefCount: 48
     m_Data:
       e00: 1
       e01: 0
@@ -759,7 +774,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 51
+  - m_RefCount: 52
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -841,7 +856,7 @@ GameObject:
   - component: {fileID: 3663150217158241889}
   - component: {fileID: 9011888264887842140}
   m_Layer: 31
-  m_Name: Manual Tiles
+  m_Name: Main Palate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
