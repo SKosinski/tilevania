@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [SerializeField] float jumpSpeed = 1f;
     [SerializeField] float climbSpeed = 1f;
     //State
-    bool isAlive = true;
+    bool isDead = false;
 
     //Cached component references
     Rigidbody2D myRigidBody;
@@ -28,9 +28,31 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        ClimbLadder();
-        Run();
-        Jump();
+        if (!isDead)
+        {
+            ClimbLadder();
+            Run();
+            Jump();
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        if(myCollider2D.IsTouchingLayers(LayerMask.GetMask("Enemy","Hazard")))
+        {
+            isDead = true;
+            myAnimator.SetTrigger("isDead");
+            Vector2 playerVelocity = new Vector2(-5f, 10f);
+            myRigidBody.velocity = playerVelocity;
+            StartCoroutine(ProcessDeath());
+        }
+    }
+
+    IEnumerator ProcessDeath()
+    {
+        yield return new WaitForSeconds(2);
+        FindObjectOfType<GameSession>().ProcessPlayerDeath();
     }
 
     void Run()
